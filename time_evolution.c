@@ -18,6 +18,7 @@ void Open_evolution(double complex *state, double complex *hamiltonian, double c
         *(E + step) = calc_Energy(state, hamiltonian, dim) - *E;
         printf("\r Progress (time evolution): %.2lf", (double)(step + 1)/N *100);
     }
+    printf("\n");
     *E = 0;
     free(dissipator);
 }
